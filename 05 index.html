@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	<title></title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+	
+</head>
+
+<body>
+
+	<h2>Tam tam dam dam:</h2>
+	
+	<script>
+// PIERWSZY	
+        var a = "zmienna globalna a";
+
+		function one () {
+			var a = "zmienna lokalna a";      //bez tego a=globalne bedzie wynikiem funkcji
+			console.log(a);
+		}
+
+        one();          //wywołanie funkcji lokalnej
+        console.log(a);  //wywołanie var a
+        console.log("----- a");   //przypisanie innej wartości var a
+
+
+// DRUGI
+        var b = "zmienna globalna b";
+
+		function two () {
+			console.log(b);
+		}
+
+        two();          //wywołanie funkcji lokalnej
+        console.log(b);  //wywołanie var a
+        console.log("----- b");   //przypisanie innej wartości var a
+
+// TRZECI
+		function thr () {
+			var c = "zmienna lokalna c";      //bez tego a=globalne bedzie wynikiem funkcji
+		}
+
+        thr();          //wywołanie funkcji lokalnej
+        console.log(c);  //wywołanie var a
+        console.log("----- c");   //przypisanie innej wartości var a
+
+
+	</script>
+
+</body>
+</html>
